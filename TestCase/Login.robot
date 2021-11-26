@@ -1,6 +1,6 @@
 *** Settings ***
-Library    AppiumLibrary
-Resource    ../Resources/common.robot
+Library           AppiumLibrary
+Resource          ../Resources/common.robot
 
 Suite Setup       Launch Apna App
 Suite Teardown    Close the Apna App 
