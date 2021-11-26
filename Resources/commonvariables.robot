@@ -11,8 +11,7 @@ ${Select_None}                 NONE OF THE ABOVE
 ${Mobile_Field}                id=et_login_number                             
 ${Go_Button}                   id=btn_send
 ${Mobile_Text}                 Your Mobile number
-${Mobile_number}               8886786112
-
+${Mobile_number}               8886786200
 
 #OTP Variables
 ${OTP_Text}                    Enter OTP
@@ -27,7 +26,6 @@ ${English}                     English
 ${Next}                        Next
 ${Next_Button}                 id=btn_continue
 ${Lets_go}                     Let’s go!
-
 
 # User Details Variables
 ${Name_Feild}                  id=act_profile_info_et_full_name
@@ -48,11 +46,9 @@ ${Next_Button1}                id=act_profile_info_btn_continue
 ${apna}                        apna
 
 # Work Experience
-${Work}                        Do you have any work experience?
 ${No_Work_Experience}          id=act_education_btn_fresher 
 
 #Education Details
-${Education}                   Education Details
 ${Education_Details}           id=et_education
 ${Skip_Photo}                  id=tv_skip_photo 
 ${Education_Degree}            id=et_degree 
@@ -65,7 +61,6 @@ ${Done}                        id=btn_continue
 ${Skip}                        Skip for now
 ${See_Jobs}                    See Jobs   
 ${trial}                       BTech/BE instrumentation Engineering 
-
 
 # With Work Experience Variables
 ${Yes}                         YES 

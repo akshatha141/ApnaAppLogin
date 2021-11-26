@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211125 15:12:44.541" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211126 16:14:17.646" rpa="false" schemaversion="2">
 <suite id="s1" name="Login" source="E:\ApnaApp\TestCase\Login.robot">
-<test id="s1-t1" name="Open the Application">
-<kw name="Launch Apna App" library="apna_user_login">
+<kw name="Launch Apna App" library="apna_user_login" type="SETUP">
 <kw name="Open Application" library="AppiumLibrary">
 <arg>${Port_Number}</arg>
 <arg>platformName=${Platform_Name}</arg>
@@ -14,13 +13,11 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20211125 15:12:45.950" endtime="20211125 15:13:21.418"/>
+<status status="PASS" starttime="20211126 16:14:18.106" endtime="20211126 16:14:38.499"/>
 </kw>
-<status status="PASS" starttime="20211125 15:12:45.950" endtime="20211125 15:13:21.418"/>
+<status status="PASS" starttime="20211126 16:14:18.106" endtime="20211126 16:14:38.502"/>
 </kw>
-<status status="PASS" starttime="20211125 15:12:45.949" endtime="20211125 15:13:21.419"/>
-</test>
-<test id="s1-t2" name="User Login through Mobile">
+<test id="s1-t1" name="User Login through Mobile">
 <kw name="Enter Mobile Number" library="apna_user_login">
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${Select_None}</arg>
@@ -28,15 +25,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:13:21.423" endtime="20211125 15:13:30.246"/>
+<status status="PASS" starttime="20211126 16:14:38.508" endtime="20211126 16:14:42.268"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:13:30.247" endtime="20211125 15:13:30.634"/>
+<status status="PASS" starttime="20211126 16:14:42.268" endtime="20211126 16:14:43.482"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:21.423" endtime="20211125 15:13:30.634"/>
+<status status="PASS" starttime="20211126 16:14:38.506" endtime="20211126 16:14:43.483"/>
 </kw>
 <kw name="Wait for text on Screen" library="common">
 <arg>${Mobile_Text}</arg>
@@ -44,24 +40,24 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:13:30.635" endtime="20211125 15:13:32.307"/>
+<status status="PASS" starttime="20211126 16:14:43.486" endtime="20211126 16:14:45.632"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:30.634" endtime="20211125 15:13:32.308"/>
+<status status="PASS" starttime="20211126 16:14:43.483" endtime="20211126 16:14:45.633"/>
 </kw>
 <kw name="Input Value" library="AppiumLibrary">
 <arg>${Mobile_Field}</arg>
 <arg>${Mobile_number}</arg>
 <doc>Sets the given value into text field identified by `locator`. This is an IOS only keyword, input value makes use of set_value</doc>
-<msg timestamp="20211125 15:13:32.313" level="INFO">Setting text '8886786112' into text field 'id=et_login_number'</msg>
-<status status="PASS" starttime="20211125 15:13:32.308" endtime="20211125 15:13:34.311"/>
+<msg timestamp="20211126 16:14:45.643" level="INFO">Setting text '8886786200' into text field 'id=et_login_number'</msg>
+<status status="PASS" starttime="20211126 16:14:45.633" endtime="20211126 16:14:46.588"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Go_Button}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:13:34.319" level="INFO">Clicking element 'id=btn_send'.</msg>
-<status status="PASS" starttime="20211125 15:13:34.311" endtime="20211125 15:13:34.939"/>
+<msg timestamp="20211126 16:14:46.597" level="INFO">Clicking element 'id=btn_send'.</msg>
+<status status="PASS" starttime="20211126 16:14:46.588" endtime="20211126 16:14:47.208"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:21.422" endtime="20211125 15:13:34.940"/>
+<status status="PASS" starttime="20211126 16:14:38.505" endtime="20211126 16:14:47.208"/>
 </kw>
 <kw name="Enter OTP Number" library="apna_user_login">
 <kw name="Wait for text on Screen" library="common">
@@ -70,9 +66,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:13:34.943" endtime="20211125 15:13:38.084"/>
+<status status="PASS" starttime="20211126 16:14:47.213" endtime="20211126 16:14:50.817"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:34.942" endtime="20211125 15:13:38.084"/>
+<status status="PASS" starttime="20211126 16:14:47.212" endtime="20211126 16:14:50.817"/>
 </kw>
 <kw name="Input Text and Enter OTP" library="common">
 <arg>${OTP_Field1}</arg>
@@ -85,39 +81,40 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>3</arg>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${number}</arg>
-<arg>timeout=20s</arg>
+<arg>${OTP}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:13:38.090" level="INFO">Typing text 'timeout=20s' into text field 'id=et_otp1'</msg>
-<status status="PASS" starttime="20211125 15:13:38.085" endtime="20211125 15:13:39.106"/>
+<msg timestamp="20211126 16:14:50.823" level="INFO">Typing text '3' into text field 'id=et_otp1'</msg>
+<status status="PASS" starttime="20211126 16:14:50.819" endtime="20211126 16:14:51.744"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${number1}</arg>
-<arg>timeout=20s</arg>
+<arg>${OTP1}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:13:39.115" level="INFO">Typing text 'timeout=20s' into text field 'id=et_otp2'</msg>
-<status status="PASS" starttime="20211125 15:13:39.107" endtime="20211125 15:13:40.072"/>
+<msg timestamp="20211126 16:14:51.752" level="INFO">Typing text '5' into text field 'id=et_otp2'</msg>
+<status status="PASS" starttime="20211126 16:14:51.744" endtime="20211126 16:14:52.824"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${number2}</arg>
-<arg>timeout=20s</arg>
+<arg>${OTP2}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:13:40.077" level="INFO">Typing text 'timeout=20s' into text field 'id=et_otp3'</msg>
-<status status="PASS" starttime="20211125 15:13:40.072" endtime="20211125 15:13:41.027"/>
+<msg timestamp="20211126 16:14:52.829" level="INFO">Typing text '6' into text field 'id=et_otp3'</msg>
+<status status="PASS" starttime="20211126 16:14:52.825" endtime="20211126 16:14:53.749"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${number3}</arg>
-<arg>timeout=20s</arg>
+<arg>${OTP3}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:13:41.037" level="INFO">Typing text 'timeout=20s' into text field 'id=et_otp4'</msg>
-<status status="PASS" starttime="20211125 15:13:41.027" endtime="20211125 15:13:42.126"/>
+<msg timestamp="20211126 16:14:53.758" level="INFO">Typing text '3' into text field 'id=et_otp4'</msg>
+<status status="PASS" starttime="20211126 16:14:53.749" endtime="20211126 16:14:54.819"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:38.085" endtime="20211125 15:13:42.127"/>
+<status status="PASS" starttime="20211126 16:14:50.818" endtime="20211126 16:14:54.820"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:34.941" endtime="20211125 15:13:42.127"/>
+<status status="PASS" starttime="20211126 16:14:47.211" endtime="20211126 16:14:54.820"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:21.421" endtime="20211125 15:13:42.128"/>
+<doc>Allows User to Login in Through Valid Mobile Number</doc>
+<status status="PASS" starttime="20211126 16:14:38.502" endtime="20211126 16:14:54.823"/>
 </test>
-<test id="s1-t3" name="User Choose Language">
+<test id="s1-t2" name="User Choose Language">
 <kw name="Select English and click Next" library="apna_user_login">
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${English}</arg>
@@ -125,15 +122,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:13:42.133" endtime="20211125 15:13:54.408"/>
+<status status="PASS" starttime="20211126 16:14:54.829" endtime="20211126 16:15:11.527"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:13:54.408" endtime="20211125 15:13:54.762"/>
+<status status="PASS" starttime="20211126 16:15:11.527" endtime="20211126 16:15:11.851"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:42.132" endtime="20211125 15:13:54.762"/>
+<status status="PASS" starttime="20211126 16:14:54.828" endtime="20211126 16:15:11.851"/>
 </kw>
 <kw name="Wait for Element to be Enabled" library="common">
 <arg>${Next_Button}</arg>
@@ -141,10 +137,10 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Verifies that element identified with locator is enabled.</doc>
-<msg timestamp="20211125 15:13:55.501" level="INFO">Element 'id=btn_continue' is enabled .</msg>
-<status status="PASS" starttime="20211125 15:13:54.764" endtime="20211125 15:13:55.501"/>
+<msg timestamp="20211126 16:15:12.675" level="INFO">Element 'id=btn_continue' is enabled .</msg>
+<status status="PASS" starttime="20211126 16:15:11.852" endtime="20211126 16:15:12.676"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:54.762" endtime="20211125 15:13:55.502"/>
+<status status="PASS" starttime="20211126 16:15:11.851" endtime="20211126 16:15:12.676"/>
 </kw>
 <kw name="Wait for Element to be Visible" library="common">
 <arg>${Next_Button}</arg>
@@ -152,44 +148,26 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20211125 15:13:55.503" endtime="20211125 15:13:55.593"/>
+<status status="PASS" starttime="20211126 16:15:12.678" endtime="20211126 16:15:12.826"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:55.502" endtime="20211125 15:13:55.594"/>
+<status status="PASS" starttime="20211126 16:15:12.677" endtime="20211126 16:15:12.826"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${Next}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:13:55.594" endtime="20211125 15:13:55.868"/>
+<status status="PASS" starttime="20211126 16:15:12.827" endtime="20211126 16:15:13.277"/>
 </kw>
 <kw name="Log Source" library="AppiumLibrary">
 <doc>Logs and returns the entire html source of the current page or frame.</doc>
-<msg timestamp="20211125 15:13:57.160" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+<msg timestamp="20211126 16:15:14.486" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
 &lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2088"&gt;
   &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2088]" displayed="true"&gt;
     &lt;android.widget.LinearLayout index="0" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2088]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2088]" displayed="true"&gt;
-        &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" resource-id="com.apnatime.debug:id/decor_content_parent" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2088]" displayed="true"&gt;
-          &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2088]" displayed="true"&gt;
-            &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2088]" displayed="true"&gt;
-              &lt;android.widget.TextView index="0" package="com.apnatime.debug" class="android.widget.TextView" text="Choose Your Language" resource-id="com.apnatime.debug:id/tv_lang_head" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,135][1080,228]" displayed="true" /&gt;
-              &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="Welcome to apna app" resource-id="com.apnatime.debug:id/tv_lang_sub_head" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,228][1080,281]" displayed="true" /&gt;
-              &lt;androidx.recyclerview.widget.RecyclerView index="2" package="com.apnatime.debug" class="androidx.recyclerview.widget.RecyclerView" text="" resource-id="com.apnatime.debug:id/rv_select_language" checkable="false" checked="false" clickable="false" enabled="true" focusable="true" focused="true" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[136,322][944,1411]" displayed="true"&gt;
-                &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[150,336][371,558]" displayed="true"&gt;
-                  &lt;android.view.ViewGroup index="0" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[150,336][371,557]" displayed="true"&gt;
-                    &lt;android.widget.ImageView index="0" package="com.apnatime.debug" class="android.widget.ImageView" text="" resource-id="com.apnatime.debug:id/iv_lang" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[233,371][288,426]" displayed="true" /&gt;
-                    &lt;android.widget.TextView index="1" package="com.apnatime.debug" class="android.widget.TextView" text="Hindi" resource-id="com.apnatime.debug:id/tv_lang" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[150,426][371,537]" displayed="true" /&gt;
-                  &lt;/android.view.ViewGroup&gt;
-                &lt;/android.view.ViewGroup&gt;
-                &lt;android.view.ViewGroup index="1" package="com.apnatime.debug" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="false" password="false" scrollable="false" selected="true" bounds="[429,336][650,558]" displayed="true" /&gt;
-              &lt;/androidx.recyclerview.widget.RecyclerView&gt;
-            &lt;/android.view.ViewGroup&gt;
-          &lt;/android.widget.FrameLayout&gt;
-        &lt;/android.view.ViewGroup&gt;
-      &lt;/android.widget.FrameLayout&gt;
+      &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,66][1080,2088]" displayed="true" /&gt;
     &lt;/android.widget.LinearLayout&gt;
   &lt;/android.widget.FrameLayout&gt;
 &lt;/hierarchy&gt;</msg>
-<status status="PASS" starttime="20211125 15:13:55.870" endtime="20211125 15:13:57.160"/>
+<status status="PASS" starttime="20211126 16:15:13.277" endtime="20211126 16:15:14.487"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${Lets_go}</arg>
@@ -197,21 +175,21 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:13:57.163" endtime="20211125 15:13:59.046"/>
+<status status="PASS" starttime="20211126 16:15:14.489" endtime="20211126 16:15:16.943"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:13:59.046" endtime="20211125 15:13:59.361"/>
+<status status="PASS" starttime="20211126 16:15:16.943" endtime="20211126 16:15:17.190"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:57.160" endtime="20211125 15:13:59.361"/>
+<status status="PASS" starttime="20211126 16:15:14.487" endtime="20211126 16:15:17.190"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:42.131" endtime="20211125 15:13:59.362"/>
+<status status="PASS" starttime="20211126 16:14:54.827" endtime="20211126 16:15:17.191"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:42.130" endtime="20211125 15:13:59.363"/>
+<doc>Allows User to Select from list of languages</doc>
+<status status="PASS" starttime="20211126 16:14:54.826" endtime="20211126 16:15:17.192"/>
 </test>
-<test id="s1-t4" name="User Visiting Card">
+<test id="s1-t3" name="User Visiting Card">
 <kw name="Enter User Name" library="apna_user_login">
 <kw name="Wait for text on Screen" library="common">
 <arg>${Next}</arg>
@@ -219,30 +197,30 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:13:59.370" endtime="20211125 15:14:03.086"/>
+<status status="PASS" starttime="20211126 16:15:17.199" endtime="20211126 16:15:21.380"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:59.367" endtime="20211125 15:14:03.087"/>
+<status status="PASS" starttime="20211126 16:15:17.198" endtime="20211126 16:15:21.380"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${Name_Feild}</arg>
 <arg>${Name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:03.091" level="INFO">Typing text 'Akshatha' into text field 'id=act_profile_info_et_full_name'</msg>
-<status status="PASS" starttime="20211125 15:14:03.087" endtime="20211125 15:14:04.227"/>
+<msg timestamp="20211126 16:15:21.395" level="INFO">Typing text 'Akshatha' into text field 'id=act_profile_info_et_full_name'</msg>
+<status status="PASS" starttime="20211126 16:15:21.382" endtime="20211126 16:15:22.322"/>
 </kw>
 <kw name="Hide Keyboard" library="AppiumLibrary">
 <doc>Hides the software keyboard on the device. (optional) In iOS, use `key_name` to press
 a particular key, ex. `Done`. In Android, no parameters are used.</doc>
-<status status="PASS" starttime="20211125 15:14:04.228" endtime="20211125 15:14:04.767"/>
+<status status="PASS" starttime="20211126 16:15:22.323" endtime="20211126 16:15:22.882"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:59.366" endtime="20211125 15:14:04.767"/>
+<status status="PASS" starttime="20211126 16:15:17.197" endtime="20211126 16:15:22.882"/>
 </kw>
 <kw name="Enter User Job City" library="apna_user_login">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Job_City}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:04.783" level="INFO">Clicking element 'id=act_profile_info_et_city'.</msg>
-<status status="PASS" starttime="20211125 15:14:04.769" endtime="20211125 15:14:04.887"/>
+<msg timestamp="20211126 16:15:22.890" level="INFO">Clicking element 'id=act_profile_info_et_city'.</msg>
+<status status="PASS" starttime="20211126 16:15:22.883" endtime="20211126 16:15:23.020"/>
 </kw>
 <kw name="Wait for text on Screen" library="common">
 <arg>${Select_Job_City}</arg>
@@ -250,16 +228,16 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:04.891" endtime="20211125 15:14:07.822"/>
+<status status="PASS" starttime="20211126 16:15:23.021" endtime="20211126 16:15:26.969"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:04.889" endtime="20211125 15:14:07.823"/>
+<status status="PASS" starttime="20211126 16:15:23.020" endtime="20211126 16:15:26.969"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${Search_Job_City}</arg>
 <arg>${Input_City}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:07.833" level="INFO">Typing text 'ben' into text field 'id=search_src_text'</msg>
-<status status="PASS" starttime="20211125 15:14:07.823" endtime="20211125 15:14:09.067"/>
+<msg timestamp="20211126 16:15:26.975" level="INFO">Typing text 'ben' into text field 'id=search_src_text'</msg>
+<status status="PASS" starttime="20211126 16:15:26.969" endtime="20211126 16:15:28.074"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${City_Name}</arg>
@@ -267,15 +245,14 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:09.069" endtime="20211125 15:14:09.284"/>
+<status status="PASS" starttime="20211126 16:15:28.075" endtime="20211126 16:15:29.091"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:09.284" endtime="20211125 15:14:10.154"/>
+<status status="PASS" starttime="20211126 16:15:29.091" endtime="20211126 16:15:29.198"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:09.068" endtime="20211125 15:14:10.155"/>
+<status status="PASS" starttime="20211126 16:15:28.074" endtime="20211126 16:15:29.199"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${apna}</arg>
@@ -283,15 +260,14 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:10.157" endtime="20211125 15:14:11.702"/>
+<status status="PASS" starttime="20211126 16:15:29.200" endtime="20211126 16:15:29.980"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:11.703" endtime="20211125 15:14:12.935"/>
+<status status="PASS" starttime="20211126 16:15:29.980" endtime="20211126 16:15:32.202"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:10.155" endtime="20211125 15:14:12.935"/>
+<status status="PASS" starttime="20211126 16:15:29.199" endtime="20211126 16:15:32.203"/>
 </kw>
 <kw name="Wait for text on Screen" library="common">
 <arg>${Next}</arg>
@@ -299,18 +275,18 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:12.936" endtime="20211125 15:14:13.141"/>
+<status status="PASS" starttime="20211126 16:15:32.203" endtime="20211126 16:15:32.427"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:12.935" endtime="20211125 15:14:13.141"/>
+<status status="PASS" starttime="20211126 16:15:32.203" endtime="20211126 16:15:32.428"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:04.768" endtime="20211125 15:14:13.142"/>
+<status status="PASS" starttime="20211126 16:15:22.883" endtime="20211126 16:15:32.428"/>
 </kw>
 <kw name="Enter User Job Location" library="apna_user_login">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Job_Location}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:13.151" level="INFO">Clicking element 'id=act_profile_info_et_location'.</msg>
-<status status="PASS" starttime="20211125 15:14:13.144" endtime="20211125 15:14:13.229"/>
+<msg timestamp="20211126 16:15:32.438" level="INFO">Clicking element 'id=act_profile_info_et_location'.</msg>
+<status status="PASS" starttime="20211126 16:15:32.429" endtime="20211126 16:15:32.549"/>
 </kw>
 <kw name="Wait for text on Screen" library="common">
 <arg>${Set_Location}</arg>
@@ -318,16 +294,16 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:13.230" endtime="20211125 15:14:15.328"/>
+<status status="PASS" starttime="20211126 16:15:32.551" endtime="20211126 16:15:35.008"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:13.230" endtime="20211125 15:14:15.330"/>
+<status status="PASS" starttime="20211126 16:15:32.550" endtime="20211126 16:15:35.008"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${Search_Location}</arg>
 <arg>${Location_Name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:15.336" level="INFO">Typing text 'Giri' into text field 'id=act_select_location_etSearchLocation'</msg>
-<status status="PASS" starttime="20211125 15:14:15.331" endtime="20211125 15:14:17.968"/>
+<msg timestamp="20211126 16:15:35.025" level="INFO">Typing text 'Giri' into text field 'id=act_select_location_etSearchLocation'</msg>
+<status status="PASS" starttime="20211126 16:15:35.009" endtime="20211126 16:15:37.231"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${Full_Location}</arg>
@@ -335,15 +311,14 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:17.970" endtime="20211125 15:14:19.152"/>
+<status status="PASS" starttime="20211126 16:15:37.236" endtime="20211126 16:15:39.242"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:19.152" endtime="20211125 15:14:19.446"/>
+<status status="PASS" starttime="20211126 16:15:39.243" endtime="20211126 16:15:40.660"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:17.968" endtime="20211125 15:14:19.446"/>
+<status status="PASS" starttime="20211126 16:15:37.232" endtime="20211126 16:15:40.661"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${apna}</arg>
@@ -351,26 +326,25 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:19.450" endtime="20211125 15:14:20.605"/>
+<status status="PASS" starttime="20211126 16:15:40.662" endtime="20211126 16:15:40.945"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:20.606" endtime="20211125 15:14:20.736"/>
+<status status="PASS" starttime="20211126 16:15:40.946" endtime="20211126 16:15:41.173"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:19.447" endtime="20211125 15:14:20.737"/>
+<status status="PASS" starttime="20211126 16:15:40.661" endtime="20211126 16:15:41.173"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:13.143" endtime="20211125 15:14:20.737"/>
+<status status="PASS" starttime="20211126 16:15:32.428" endtime="20211126 16:15:41.174"/>
 </kw>
 <kw name="User Select Gender" library="apna_user_login">
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Select_Female}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:20.744" level="INFO">Clicking element 'id=btn_gender_female'.</msg>
-<status status="PASS" starttime="20211125 15:14:20.739" endtime="20211125 15:14:20.951"/>
+<msg timestamp="20211126 16:15:41.185" level="INFO">Clicking element 'id=btn_gender_female'.</msg>
+<status status="PASS" starttime="20211126 16:15:41.177" endtime="20211126 16:15:41.686"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:20.738" endtime="20211125 15:14:20.952"/>
+<status status="PASS" starttime="20211126 16:15:41.176" endtime="20211126 16:15:41.686"/>
 </kw>
 <kw name="Click on Next" library="apna_user_login">
 <kw name="Wait for Element to be Enabled" library="common">
@@ -379,15 +353,15 @@ a particular key, ex. `Done`. In Android, no parameters are used.</doc>
 <arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Verifies that element identified with locator is enabled.</doc>
-<msg timestamp="20211125 15:14:21.554" level="INFO">Element 'id=act_profile_info_btn_continue' is enabled .</msg>
-<status status="PASS" starttime="20211125 15:14:20.958" endtime="20211125 15:14:21.554"/>
+<msg timestamp="20211126 16:15:42.347" level="INFO">Element 'id=act_profile_info_btn_continue' is enabled .</msg>
+<status status="PASS" starttime="20211126 16:15:41.689" endtime="20211126 16:15:42.347"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:20.957" endtime="20211125 15:14:21.554"/>
+<status status="PASS" starttime="20211126 16:15:41.688" endtime="20211126 16:15:42.348"/>
 </kw>
 <kw name="Is Keyboard Shown" library="AppiumLibrary">
 <doc>Return true if Android keyboard is displayed or False if not displayed
 No parameters are used.</doc>
-<status status="PASS" starttime="20211125 15:14:21.554" endtime="20211125 15:14:21.686"/>
+<status status="PASS" starttime="20211126 16:15:42.348" endtime="20211126 16:15:42.561"/>
 </kw>
 <kw name="Wait for Element to be Visible" library="common">
 <arg>${Next_Button1}</arg>
@@ -395,61 +369,69 @@ No parameters are used.</doc>
 <arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` is visible.</doc>
-<status status="PASS" starttime="20211125 15:14:21.687" endtime="20211125 15:14:21.770"/>
+<status status="PASS" starttime="20211126 16:15:42.563" endtime="20211126 16:15:42.678"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:21.686" endtime="20211125 15:14:21.770"/>
+<status status="PASS" starttime="20211126 16:15:42.561" endtime="20211126 16:15:42.678"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${Next}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:21.771" endtime="20211125 15:14:21.926"/>
+<status status="PASS" starttime="20211126 16:15:42.678" endtime="20211126 16:15:42.881"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:20.956" endtime="20211125 15:14:21.927"/>
+<status status="PASS" starttime="20211126 16:15:41.687" endtime="20211126 16:15:42.882"/>
 </kw>
-<status status="PASS" starttime="20211125 15:13:59.365" endtime="20211125 15:14:21.932"/>
+<doc>Allows User to enter Personal Details</doc>
+<status status="PASS" starttime="20211126 16:15:17.196" endtime="20211126 16:15:42.904"/>
 </test>
-<test id="s1-t5" name="Experience Details">
+<test id="s1-t4" name="Experience Details">
 <kw name="Select Work Experience" library="apna_user_login">
-<kw name="Wait for text on Screen" library="common">
-<arg>${Work}</arg>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>${text}</arg>
+<kw name="Wait for Element on Screen and click Element" library="common">
+<arg>${No_Work_Experience}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
 <arg>timeout=20s</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:21.944" endtime="20211125 15:14:24.357"/>
-</kw>
-<status status="PASS" starttime="20211125 15:14:21.943" endtime="20211125 15:14:24.357"/>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20211126 16:15:42.923" endtime="20211126 16:15:46.966"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
-<arg>${No_Work_Experience}</arg>
+<arg>${element}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:24.367" level="INFO">Clicking element 'id=act_education_btn_fresher'.</msg>
-<status status="PASS" starttime="20211125 15:14:24.358" endtime="20211125 15:14:25.362"/>
+<msg timestamp="20211126 16:15:46.979" level="INFO">Clicking element 'id=act_education_btn_fresher'.</msg>
+<status status="PASS" starttime="20211126 16:15:46.966" endtime="20211126 16:15:47.708"/>
+</kw>
+<status status="PASS" starttime="20211126 16:15:42.922" endtime="20211126 16:15:47.709"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${Next}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:25.362" endtime="20211125 15:14:25.493"/>
+<status status="PASS" starttime="20211126 16:15:47.709" endtime="20211126 16:15:47.855"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:21.942" endtime="20211125 15:14:25.493"/>
+<status status="PASS" starttime="20211126 16:15:42.921" endtime="20211126 16:15:47.856"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:21.940" endtime="20211125 15:14:25.495"/>
+<doc>Allows User to select work experience</doc>
+<status status="PASS" starttime="20211126 16:15:42.913" endtime="20211126 16:15:47.860"/>
 </test>
-<test id="s1-t6" name="User Education Details">
+<test id="s1-t5" name="User Education Details">
 <kw name="User Enters Highest Qualification" library="apna_user_login">
-<kw name="Wait for text on Screen" library="common">
-<arg>${Education}</arg>
-<kw name="Wait Until Page Contains" library="AppiumLibrary">
-<arg>${text}</arg>
+<kw name="Wait for Element on Screen and click Element" library="common">
+<arg>${Education_Details}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
 <arg>timeout=20s</arg>
-<doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:25.500" endtime="20211125 15:14:28.626"/>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" starttime="20211126 16:15:47.904" endtime="20211126 16:15:52.130"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:25.499" endtime="20211125 15:14:28.626"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${element}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211126 16:15:52.136" level="INFO">Clicking element 'id=et_education'.</msg>
+<status status="PASS" starttime="20211126 16:15:52.130" endtime="20211126 16:15:52.813"/>
+</kw>
+<status status="PASS" starttime="20211126 16:15:47.891" endtime="20211126 16:15:52.813"/>
 </kw>
 <kw name="Log Source" library="AppiumLibrary">
 <doc>Logs and returns the entire html source of the current page or frame.</doc>
-<msg timestamp="20211125 15:14:29.111" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
+<msg timestamp="20211126 16:15:53.417" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
 &lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2088"&gt;
   &lt;android.widget.FrameLayout index="0" package="com.apnatime.debug" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2088]" displayed="true"&gt;
     &lt;android.widget.LinearLayout index="0" package="com.apnatime.debug" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2088]" displayed="true"&gt;
@@ -503,30 +485,24 @@ No parameters are used.</doc>
     &lt;/android.widget.LinearLayout&gt;
   &lt;/android.widget.FrameLayout&gt;
 &lt;/hierarchy&gt;</msg>
-<status status="PASS" starttime="20211125 15:14:28.626" endtime="20211125 15:14:29.112"/>
-</kw>
-<kw name="Click Element" library="AppiumLibrary">
-<arg>${Education_Details}</arg>
-<doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:29.117" level="INFO">Clicking element 'id=et_education'.</msg>
-<status status="PASS" starttime="20211125 15:14:29.112" endtime="20211125 15:14:29.275"/>
+<status status="PASS" starttime="20211126 16:15:52.814" endtime="20211126 16:15:53.417"/>
 </kw>
 <kw name="Click Element At Coordinates" library="AppiumLibrary">
 <arg>179</arg>
 <arg>1796</arg>
 <doc>click element at a certain coordinate</doc>
-<msg timestamp="20211125 15:14:29.285" level="INFO">Pressing at (179, 1796).</msg>
-<status status="PASS" starttime="20211125 15:14:29.275" endtime="20211125 15:14:30.450"/>
+<msg timestamp="20211126 16:15:53.427" level="INFO">Pressing at (179, 1796).</msg>
+<status status="PASS" starttime="20211126 16:15:53.418" endtime="20211126 16:15:54.356"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:25.498" endtime="20211125 15:14:30.450"/>
+<status status="PASS" starttime="20211126 16:15:47.890" endtime="20211126 16:15:54.356"/>
 </kw>
 <kw name="User Enters Degree Details" library="apna_user_login">
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${Education_Degree}</arg>
 <arg>${Degree}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:30.459" level="INFO">Typing text 'BTech/BE' into text field 'id=et_degree'</msg>
-<status status="PASS" starttime="20211125 15:14:30.452" endtime="20211125 15:14:31.625"/>
+<msg timestamp="20211126 16:15:54.363" level="INFO">Typing text 'BTech/BE' into text field 'id=et_degree'</msg>
+<status status="PASS" starttime="20211126 16:15:54.357" endtime="20211126 16:15:55.543"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${trial}</arg>
@@ -534,25 +510,24 @@ No parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:31.627" endtime="20211125 15:14:33.584"/>
+<status status="PASS" starttime="20211126 16:15:55.544" endtime="20211126 16:15:57.550"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:33.584" endtime="20211125 15:14:33.792"/>
+<status status="PASS" starttime="20211126 16:15:57.550" endtime="20211126 16:15:57.726"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:31.626" endtime="20211125 15:14:33.792"/>
+<status status="PASS" starttime="20211126 16:15:55.543" endtime="20211126 16:15:57.727"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:30.451" endtime="20211125 15:14:33.793"/>
+<status status="PASS" starttime="20211126 16:15:54.357" endtime="20211126 16:15:57.727"/>
 </kw>
 <kw name="User Enters University Details" library="apna_user_login">
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${University_Field}</arg>
 <arg>${University_Name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:33.806" level="INFO">Typing text 'National College, Tiruchirappalli' into text field 'id=et_college'</msg>
-<status status="PASS" starttime="20211125 15:14:33.794" endtime="20211125 15:14:35.174"/>
+<msg timestamp="20211126 16:15:57.747" level="INFO">Typing text 'National College, Tiruchirappalli' into text field 'id=et_college'</msg>
+<status status="PASS" starttime="20211126 16:15:57.730" endtime="20211126 16:15:59.098"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${University_Name}</arg>
@@ -560,15 +535,14 @@ No parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:35.176" endtime="20211125 15:14:35.583"/>
+<status status="PASS" starttime="20211126 16:15:59.099" endtime="20211126 16:15:59.507"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:35.583" endtime="20211125 15:14:35.933"/>
+<status status="PASS" starttime="20211126 16:15:59.508" endtime="20211126 16:15:59.920"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:35.175" endtime="20211125 15:14:35.933"/>
+<status status="PASS" starttime="20211126 16:15:59.098" endtime="20211126 16:15:59.921"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${Next}</arg>
@@ -576,21 +550,21 @@ No parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:35.934" endtime="20211125 15:14:36.323"/>
+<status status="PASS" starttime="20211126 16:15:59.922" endtime="20211126 16:16:00.144"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:36.323" endtime="20211125 15:14:36.862"/>
+<status status="PASS" starttime="20211126 16:16:00.144" endtime="20211126 16:16:00.280"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:35.933" endtime="20211125 15:14:36.863"/>
+<status status="PASS" starttime="20211126 16:15:59.921" endtime="20211126 16:16:00.280"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:33.794" endtime="20211125 15:14:36.863"/>
+<status status="PASS" starttime="20211126 16:15:57.728" endtime="20211126 16:16:00.281"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:25.497" endtime="20211125 15:14:36.864"/>
+<doc>User to enter Educational Details</doc>
+<status status="PASS" starttime="20211126 16:15:47.888" endtime="20211126 16:16:00.282"/>
 </test>
-<test id="s1-t7" name="User Category Details">
+<test id="s1-t6" name="User Category Details">
 <kw name="User Enters Job categories" library="apna_user_login">
 <kw name="Wait for text on Screen" library="common">
 <arg>${Job_Catagory}</arg>
@@ -598,23 +572,23 @@ No parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:36.872" endtime="20211125 15:14:40.962"/>
+<status status="PASS" starttime="20211126 16:16:00.286" endtime="20211126 16:16:05.263"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:36.871" endtime="20211125 15:14:40.963"/>
+<status status="PASS" starttime="20211126 16:16:00.285" endtime="20211126 16:16:05.263"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Accounts}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:40.972" level="INFO">Clicking element 'id=row_super_category'.</msg>
-<status status="PASS" starttime="20211125 15:14:40.963" endtime="20211125 15:14:42.071"/>
+<msg timestamp="20211126 16:16:05.281" level="INFO">Clicking element 'id=row_super_category'.</msg>
+<status status="PASS" starttime="20211126 16:16:05.264" endtime="20211126 16:16:06.687"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Done}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211125 15:14:42.076" level="INFO">Clicking element 'id=btn_continue'.</msg>
-<status status="PASS" starttime="20211125 15:14:42.072" endtime="20211125 15:14:42.710"/>
+<msg timestamp="20211126 16:16:06.697" level="INFO">Clicking element 'id=btn_continue'.</msg>
+<status status="PASS" starttime="20211126 16:16:06.689" endtime="20211126 16:16:07.387"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:36.870" endtime="20211125 15:14:42.711"/>
+<status status="PASS" starttime="20211126 16:16:00.284" endtime="20211126 16:16:07.387"/>
 </kw>
 <kw name="User Added Gallery and See Jobs" library="apna_user_login">
 <kw name="Wait for text on Screen and click Text" library="common">
@@ -623,15 +597,14 @@ No parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:42.713" endtime="20211125 15:14:44.955"/>
+<status status="PASS" starttime="20211126 16:16:07.390" endtime="20211126 16:16:09.749"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:44.955" endtime="20211125 15:14:45.098"/>
+<status status="PASS" starttime="20211126 16:16:09.749" endtime="20211126 16:16:09.886"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:42.712" endtime="20211125 15:14:45.099"/>
+<status status="PASS" starttime="20211126 16:16:07.389" endtime="20211126 16:16:09.887"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="common">
 <arg>${See_Jobs}</arg>
@@ -639,30 +612,37 @@ No parameters are used.</doc>
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211125 15:14:45.103" endtime="20211125 15:14:48.803"/>
+<status status="PASS" starttime="20211126 16:16:09.887" endtime="20211126 16:16:14.298"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
-<arg>timeout=20s</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211125 15:14:48.803" endtime="20211125 15:14:48.909"/>
+<status status="PASS" starttime="20211126 16:16:14.298" endtime="20211126 16:16:14.409"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:45.100" endtime="20211125 15:14:48.909"/>
+<status status="PASS" starttime="20211126 16:16:09.887" endtime="20211126 16:16:14.410"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:42.711" endtime="20211125 15:14:48.909"/>
+<status status="PASS" starttime="20211126 16:16:07.388" endtime="20211126 16:16:14.410"/>
 </kw>
-<status status="PASS" starttime="20211125 15:14:36.867" endtime="20211125 15:14:48.910"/>
+<doc>User to specify type of job</doc>
+<status status="PASS" starttime="20211126 16:16:00.283" endtime="20211126 16:16:14.411"/>
 </test>
-<status status="PASS" starttime="20211125 15:12:44.546" endtime="20211125 15:14:48.913"/>
+<kw name="Close the Apna App" library="apna_user_login" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" starttime="20211126 16:16:14.417" endtime="20211126 16:16:16.001"/>
+</kw>
+<status status="PASS" starttime="20211126 16:16:14.416" endtime="20211126 16:16:16.001"/>
+</kw>
+<status status="PASS" starttime="20211126 16:14:17.648" endtime="20211126 16:16:16.002"/>
 </suite>
 <statistics>
 <total>
-<stat pass="7" fail="0" skip="0">All Tests</stat>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="7" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="6" fail="0" skip="0" id="s1" name="Login">Login</stat>
 </suite>
 </statistics>
 <errors>
