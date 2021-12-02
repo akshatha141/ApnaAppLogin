@@ -11,7 +11,7 @@ ${Select_None}                 NONE OF THE ABOVE
 ${Mobile_Field}                id=et_login_number                             
 ${Go_Button}                   id=btn_send
 ${Mobile_Text}                 Your Mobile number
-${Mobile_number}               8886786200
+${Mobile_number}               8886786202
 
 #OTP Variables
 ${OTP_Text}                    Enter OTP

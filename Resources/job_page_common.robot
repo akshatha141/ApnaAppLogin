@@ -1,11 +1,11 @@
 *** Settings ***
-Resource    ../Resources/commonvariables.robot
-Resource    ../Apna/apna_user_login.robot
+Resource          ../Resources/job_page_locators.robot
+Resource          ../Apna/apna_job_page.robot
 
 
 
 *** Keywords ***
-
+    
 Wait for Element on Screen and click Element 
     [Arguments]   ${element} 
     Wait Until Page Contains Element    ${element}   timeout=20s 
