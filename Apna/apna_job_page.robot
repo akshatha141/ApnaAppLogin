@@ -51,6 +51,7 @@ Click on search field and apply for job
     Wait for text on Screen and click Text           ${search_default}  
     Wait Until Page Contains Element                 ${job_title}        timeout=20s
     Element Should Contain Text                      ${job_title}        ${job_title_name}   timeout=20s
+    Element Should Contain Text                      ${viewed}           ${view}
     Click Element                                    ${back_button} 
     Wait for text on Screen                          ${search_default} 
     Click Element                                    ${back_button} 

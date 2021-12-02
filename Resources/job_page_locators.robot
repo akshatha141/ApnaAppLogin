@@ -33,3 +33,5 @@ ${job_title}                  id=tvJobTitle
 ${job_title_name}             Cook / Chef
 ${back_button}                id=iv_back
 ${search_default}             Try searching for
+${viewed}                     id=tvStatus  
+${view}                       VIEWED

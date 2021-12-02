@@ -24,4 +24,5 @@ Check if user can delete all the Selected Job type
 Check the functionality of search field  
     [Tags]  Smoke
     Click on search field and apply for job
+
     
