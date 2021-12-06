@@ -23,6 +23,7 @@ ${add_account}                xpath=//android.view.ViewGroup[@index="0"]//androi
 ${message}                    id=tv_select_atleast_one   
 ${job_type}                   Your selected job types 
 ${DeleteAll_text}             Add at least 1 job type
+${telle}                      xpath=//android.view.ViewGroup[@index="1"]
 
 #search functionality
 ${search_feild}               id=etSearchJobs
@@ -35,3 +36,24 @@ ${back_button}                id=iv_back
 ${search_default}             Try searching for
 ${viewed}                     id=tvStatus  
 ${view}                       VIEWED
+${work}                       id=chip_filter_wfh
+${home}                       id=iv_wfh
+${All}                        id=chip_filter_all
+
+#Location Change
+${view_all}                   xpath=//android.widget.LinearLayout[@index="3"]//android.widget.TextView[@text="View All"]
+${part_time}                  Part-time
+${part_time_text}             There are no jobs available for the filters you have selected. Please try changing filters
+${part_time_ID}               id=tvNoData
+${job_back}                   id=back
+${apna_jobs}                  apnaJobs
+${Search_Location}            id=act_select_location_etSearchLocation
+${location_change}            id=tv_location_area
+${Location_Name}              Jayanag
+${Location_Jayanagar}         Jayanagar
+${Trending}                   id=row_job_category_tv_title
+${No_jobs}                    Jobs are not available in your selected job types. Please check similar jobs.
+${Night_Shift}                id=chip_filter_night_shift
+${Location_Name1}             Giri Na
+${Location_Giri}              Giri Nagar
+ 
