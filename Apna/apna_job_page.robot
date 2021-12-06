@@ -10,10 +10,10 @@ Select a job type
 
 click on add button          
     Click Element                                    ${Add_Job} 
-    Element Should Contain Text                      ${Telecaller}         ${Telecaller_name}   timeout=20s 
+    Element Should Contain Text                      ${Telecaller}         ${Telecaller_name}  
     Click Element                                    ${Back} 
     Wait for text on Screen                          ${job_type}  
-    Element Should Contain Text                      ${Telecaller_Delete}  ${Telecaller_name}   timeout=20s 
+    Element Should Contain Text                      ${Telecaller_Delete}  ${Telecaller_name}   
 
 Select job type 
     Wait for text on Screen                          ${job_type}  
@@ -21,7 +21,7 @@ Select job type
     Wait for text on Screen                          ${job_name} 
 
 click on delete  
-    Element Should Contain Text                      ${Telecaller}       ${Telecaller_name}     timeout=20s      
+    Element Should Contain Text                      ${Telecaller}       ${Telecaller_name}          
     Click Element                                    ${remove} 
     Wait Until Page Contains Element                 ${Telecaller_Add}   timeout=20s         
     Page Should Contain Element                      ${Telecaller_Add}
@@ -39,7 +39,7 @@ Click Delete
     Wait Until Page Contains Element                 ${message}          timeout=20s
     ${text}=  Get Text  ${message} 
     Log To Console                                   ${text}
-    Element Should Contain Text                      ${message}          ${DeleteAll_text}   timeout=20s
+    Element Should Contain Text                      ${message}          ${DeleteAll_text}   
     Click Element                                    ${add_account} 
     Click Element                                    ${Back} 
 
@@ -50,7 +50,7 @@ Click on search field and apply for job
     Input Text                                       ${search_input}      ${cook} 
     Wait for text on Screen and click Text           ${search_default}  
     Wait Until Page Contains Element                 ${job_title}         timeout=20s
-    Element Should Contain Text                      ${job_title}         ${job_title_name}   timeout=20s
+    Element Should Contain Text                      ${job_title}         ${job_title_name}  
     Element Should Contain Text                      ${viewed}            ${view}
     Click Element                                    ${back_button} 
     Wait for text on Screen                          ${search_default} 
