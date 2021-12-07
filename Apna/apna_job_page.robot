@@ -23,7 +23,7 @@ Select job type
 click on delete  
     Element Should Contain Text                      ${Telecaller}       ${Telecaller_name}          
     Click Element                                    ${remove} 
-    Wait Until Page Contains Element                 ${Telecaller_Add}   timeout=20s         
+    Wait for Element on Screen                       ${Telecaller_Add}            
     Page Should Contain Element                      ${Telecaller_Add}
     Click Element                                    ${Back} 
     Wait for text on Screen                          ${job_type} 
@@ -36,7 +36,7 @@ Select a particular job
 
 Click Delete         
     Click Element                                    ${remove_account}
-    Wait Until Page Contains Element                 ${message}          timeout=20s
+    Wait for Element on Screen                       ${message}         
     ${text}=  Get Text  ${message} 
     Log To Console                                   ${text}
     Element Should Contain Text                      ${message}          ${DeleteAll_text}   
@@ -49,7 +49,7 @@ Click on search field and apply for job
     Wait for text on Screen                          ${search_name} 
     Input Text                                       ${search_input}      ${cook} 
     Wait for text on Screen and click Text           ${search_default}  
-    Wait Until Page Contains Element                 ${job_title}         timeout=20s
+    Wait for Element on Screen                       ${job_title}         
     Element Should Contain Text                      ${job_title}         ${job_title_name}  
     Element Should Contain Text                      ${viewed}            ${view}
     Click Element                                    ${back_button} 
@@ -63,7 +63,7 @@ Click on work from home
 verify work from home jobs are displayed       
     Wait for text on Screen                          ${job_type}
     Swipe by Percent                                 50  35  50  5 
-    Wait Until Page Contains Element                 ${home}              timeout=20s
+    Wait for Element on Screen                       ${home}              
     Page Should Contain Element                      ${home} 
     Click Element                                    ${All} 
 
@@ -75,27 +75,27 @@ Click on view all jobs
 select part time jobs    
     Wait for text on Screen and click Text           ${part_time} 
     Wait for text on Screen                          ${part_time_text}  
-    Element Should Contain Text                      ${part_time_ID}       ${part_time_text}    
+    Element Should Contain Text                      ${part_time_ID}        ${part_time_text}    
     Click Element                                    ${job_back} 
 
 Click on Change location
     Wait for text on Screen                          ${job_type}
     Click Element                                    ${location_change} 
-    Wait Until Page Contains Element                 ${Search_Location}     timeout=20s   
-    Input Text                                       ${Search_Location}     ${Location_Name}
+    Wait for Element on Screen                       ${Search_Location}      
+    Input Text                                       ${Search_Location}      ${Location_Name}
     Wait for text on Screen and click Text           ${Location_Jayanagar} 
 
 Search jobs    
     Wait for text on Screen                          ${job_type}
     Click Text                                       ${part_time}  
-    Wait Until Page Contains Element                 ${Trending}             timeout=20s  
+    Wait for Element on Screen                       ${Trending}              
     Page Should Contain Text                         ${No_jobs}  
     Click Element                                    ${Night_Shift}  
-    Wait Until Page Contains Element                 ${Trending}             timeout=20s  
+    Wait for Element on Screen                       ${Trending}              
     Page Should Contain Text                         ${No_jobs}  
     Click Element                                    ${location_change} 
-    Wait Until Page Contains Element                 ${Search_Location}      timeout=20s   
-    Input Text                                       ${Search_Location}      ${Location_Name1}  
+    Wait for Element on Screen                       ${Search_Location}        
+    Input Text                                       ${Search_Location}       ${Location_Name1}  
     Wait for text on Screen and click Text           ${Location_Giri}                  
     Wait for text on Screen                          ${job_type}   
     Click Element                                    ${All}  

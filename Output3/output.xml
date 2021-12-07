@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211206 13:29:19.368" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20211206 15:10:31.774" rpa="false" schemaversion="2">
 <suite id="s1" name="Job Page" source="E:\ApnaApp\TestCase\Job_Page.robot">
 <kw name="Launch Apna App" library="apna_job_page" type="SETUP">
 <kw name="Open Application" library="AppiumLibrary">
@@ -14,9 +14,9 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |</doc>
-<status status="PASS" starttime="20211206 13:29:19.850" endtime="20211206 13:29:41.745"/>
+<status status="PASS" starttime="20211206 15:10:32.355" endtime="20211206 15:11:04.872"/>
 </kw>
-<status status="PASS" starttime="20211206 13:29:19.849" endtime="20211206 13:29:41.746"/>
+<status status="PASS" starttime="20211206 15:10:32.354" endtime="20211206 15:11:04.872"/>
 </kw>
 <test id="s1-t1" name="Check if jobs are available by changing the location">
 <kw name="Click on Change location" library="apna_job_page">
@@ -26,28 +26,32 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:29:41.751" endtime="20211206 13:29:56.849"/>
+<status status="PASS" starttime="20211206 15:11:04.876" endtime="20211206 15:11:24.546"/>
 </kw>
-<status status="PASS" starttime="20211206 13:29:41.750" endtime="20211206 13:29:56.849"/>
+<status status="PASS" starttime="20211206 15:11:04.875" endtime="20211206 15:11:24.547"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${location_change}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211206 13:29:56.860" level="INFO">Clicking element 'id=tv_location_area'.</msg>
-<status status="PASS" starttime="20211206 13:29:56.850" endtime="20211206 13:29:57.111"/>
+<msg timestamp="20211206 15:11:24.553" level="INFO">Clicking element 'id=tv_location_area'.</msg>
+<status status="PASS" starttime="20211206 15:11:24.547" endtime="20211206 15:11:24.811"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<kw name="Wait for Element on Screen" library="job_page_common">
 <arg>${Search_Location}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:29:57.112" endtime="20211206 13:30:00.344"/>
+<status status="PASS" starttime="20211206 15:11:24.813" endtime="20211206 15:11:27.523"/>
+</kw>
+<status status="PASS" starttime="20211206 15:11:24.812" endtime="20211206 15:11:27.524"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${Search_Location}</arg>
 <arg>${Location_Name}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211206 13:30:00.353" level="INFO">Typing text 'Jayanag' into text field 'id=act_select_location_etSearchLocation'</msg>
-<status status="PASS" starttime="20211206 13:30:00.345" endtime="20211206 13:30:01.968"/>
+<msg timestamp="20211206 15:11:27.527" level="INFO">Typing text 'Jayanag' into text field 'id=act_select_location_etSearchLocation'</msg>
+<status status="PASS" starttime="20211206 15:11:27.524" endtime="20211206 15:11:28.635"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="job_page_common">
 <arg>${Location_Jayanagar}</arg>
@@ -55,16 +59,16 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:01.970" endtime="20211206 13:30:02.838"/>
+<status status="PASS" starttime="20211206 15:11:28.636" endtime="20211206 15:11:30.538"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211206 13:30:02.839" endtime="20211206 13:30:03.504"/>
+<status status="PASS" starttime="20211206 15:11:30.538" endtime="20211206 15:11:31.354"/>
 </kw>
-<status status="PASS" starttime="20211206 13:30:01.969" endtime="20211206 13:30:03.505"/>
+<status status="PASS" starttime="20211206 15:11:28.636" endtime="20211206 15:11:31.354"/>
 </kw>
-<status status="PASS" starttime="20211206 13:29:41.749" endtime="20211206 13:30:03.505"/>
+<status status="PASS" starttime="20211206 15:11:04.874" endtime="20211206 15:11:31.355"/>
 </kw>
 <kw name="Search jobs" library="apna_job_page">
 <kw name="Wait for text on Screen" library="job_page_common">
@@ -73,63 +77,75 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:03.509" endtime="20211206 13:30:07.564"/>
+<status status="PASS" starttime="20211206 15:11:31.360" endtime="20211206 15:11:35.093"/>
 </kw>
-<status status="PASS" starttime="20211206 13:30:03.508" endtime="20211206 13:30:07.564"/>
+<status status="PASS" starttime="20211206 15:11:31.359" endtime="20211206 15:11:35.094"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${part_time}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211206 13:30:07.565" endtime="20211206 13:30:08.030"/>
+<status status="PASS" starttime="20211206 15:11:35.094" endtime="20211206 15:11:35.538"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<kw name="Wait for Element on Screen" library="job_page_common">
 <arg>${Trending}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:08.031" endtime="20211206 13:30:12.166"/>
+<status status="PASS" starttime="20211206 15:11:35.540" endtime="20211206 15:11:37.926"/>
+</kw>
+<status status="PASS" starttime="20211206 15:11:35.538" endtime="20211206 15:11:37.927"/>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <arg>${No_jobs}</arg>
 <doc>Verifies that current page contains `text`.</doc>
-<msg timestamp="20211206 13:30:13.336" level="INFO">Current page contains text 'Jobs are not available in your selected job types. Please check similar jobs.'.</msg>
-<status status="PASS" starttime="20211206 13:30:12.166" endtime="20211206 13:30:13.336"/>
+<msg timestamp="20211206 15:11:38.967" level="INFO">Current page contains text 'Jobs are not available in your selected job types. Please check similar jobs.'.</msg>
+<status status="PASS" starttime="20211206 15:11:37.927" endtime="20211206 15:11:38.967"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${Night_Shift}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211206 13:30:13.345" level="INFO">Clicking element 'id=chip_filter_night_shift'.</msg>
-<status status="PASS" starttime="20211206 13:30:13.336" endtime="20211206 13:30:13.555"/>
+<msg timestamp="20211206 15:11:38.979" level="INFO">Clicking element 'id=chip_filter_night_shift'.</msg>
+<status status="PASS" starttime="20211206 15:11:38.968" endtime="20211206 15:11:40.783"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<kw name="Wait for Element on Screen" library="job_page_common">
 <arg>${Trending}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:13.556" endtime="20211206 13:30:17.060"/>
+<status status="PASS" starttime="20211206 15:11:40.784" endtime="20211206 15:11:43.926"/>
+</kw>
+<status status="PASS" starttime="20211206 15:11:40.783" endtime="20211206 15:11:43.927"/>
 </kw>
 <kw name="Page Should Contain Text" library="AppiumLibrary">
 <arg>${No_jobs}</arg>
 <doc>Verifies that current page contains `text`.</doc>
-<msg timestamp="20211206 13:30:18.856" level="INFO">Current page contains text 'Jobs are not available in your selected job types. Please check similar jobs.'.</msg>
-<status status="PASS" starttime="20211206 13:30:17.060" endtime="20211206 13:30:18.857"/>
+<msg timestamp="20211206 15:11:45.664" level="INFO">Current page contains text 'Jobs are not available in your selected job types. Please check similar jobs.'.</msg>
+<status status="PASS" starttime="20211206 15:11:43.927" endtime="20211206 15:11:45.665"/>
 </kw>
 <kw name="Click Element" library="AppiumLibrary">
 <arg>${location_change}</arg>
 <doc>Click element identified by `locator`.</doc>
-<msg timestamp="20211206 13:30:18.866" level="INFO">Clicking element 'id=tv_location_area'.</msg>
-<status status="PASS" starttime="20211206 13:30:18.857" endtime="20211206 13:30:19.035"/>
+<msg timestamp="20211206 15:11:45.673" level="INFO">Clicking element 'id=tv_location_area'.</msg>
+<status status="PASS" starttime="20211206 15:11:45.665" endtime="20211206 15:11:46.028"/>
 </kw>
-<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<kw name="Wait for Element on Screen" library="job_page_common">
 <arg>${Search_Location}</arg>
+<kw name="Wait Until Page Contains Element" library="AppiumLibrary">
+<arg>${element}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until element specified with `locator` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:19.035" endtime="20211206 13:30:21.597"/>
+<status status="PASS" starttime="20211206 15:11:46.029" endtime="20211206 15:11:48.276"/>
+</kw>
+<status status="PASS" starttime="20211206 15:11:46.029" endtime="20211206 15:11:48.276"/>
 </kw>
 <kw name="Input Text" library="AppiumLibrary">
 <arg>${Search_Location}</arg>
 <arg>${Location_Name1}</arg>
 <doc>Types the given `text` into text field identified by `locator`.</doc>
-<msg timestamp="20211206 13:30:21.605" level="INFO">Typing text 'Giri Na' into text field 'id=act_select_location_etSearchLocation'</msg>
-<status status="PASS" starttime="20211206 13:30:21.597" endtime="20211206 13:30:22.706"/>
+<msg timestamp="20211206 15:11:48.282" level="INFO">Typing text 'Giri Na' into text field 'id=act_select_location_etSearchLocation'</msg>
+<status status="PASS" starttime="20211206 15:11:48.277" endtime="20211206 15:11:49.334"/>
 </kw>
 <kw name="Wait for text on Screen and click Text" library="job_page_common">
 <arg>${Location_Giri}</arg>
@@ -137,14 +153,14 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:22.708" endtime="20211206 13:30:23.871"/>
+<status status="PASS" starttime="20211206 15:11:49.335" endtime="20211206 15:11:50.515"/>
 </kw>
 <kw name="Click Text" library="AppiumLibrary">
 <arg>${text}</arg>
 <doc>Click text identified by ``text``.</doc>
-<status status="PASS" starttime="20211206 13:30:23.871" endtime="20211206 13:30:26.244"/>
+<status status="PASS" starttime="20211206 15:11:50.515" endtime="20211206 15:11:50.687"/>
 </kw>
-<status status="PASS" starttime="20211206 13:30:22.706" endtime="20211206 13:30:26.245"/>
+<status status="PASS" starttime="20211206 15:11:49.335" endtime="20211206 15:11:50.688"/>
 </kw>
 <kw name="Wait for text on Screen" library="job_page_common">
 <arg>${job_type}</arg>
@@ -152,16 +168,22 @@ Please check https://github.com/appium/appium/blob/master/docs/en/writing-runnin
 <arg>${text}</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until `text` appears on current page.</doc>
-<status status="PASS" starttime="20211206 13:30:26.246" endtime="20211206 13:30:28.762"/>
+<status status="PASS" starttime="20211206 15:11:50.689" endtime="20211206 15:11:54.155"/>
 </kw>
-<status status="PASS" starttime="20211206 13:30:26.245" endtime="20211206 13:30:28.762"/>
+<status status="PASS" starttime="20211206 15:11:50.688" endtime="20211206 15:11:54.156"/>
 </kw>
-<status status="PASS" starttime="20211206 13:30:03.507" endtime="20211206 13:30:28.762"/>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${All}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20211206 15:11:54.160" level="INFO">Clicking element 'id=chip_filter_all'.</msg>
+<status status="PASS" starttime="20211206 15:11:54.156" endtime="20211206 15:11:55.564"/>
+</kw>
+<status status="PASS" starttime="20211206 15:11:31.358" endtime="20211206 15:11:55.566"/>
 </kw>
 <tag>Smoke</tag>
-<status status="PASS" starttime="20211206 13:29:41.746" endtime="20211206 13:30:28.764"/>
+<status status="PASS" starttime="20211206 15:11:04.872" endtime="20211206 15:11:55.568"/>
 </test>
-<status status="PASS" starttime="20211206 13:29:19.370" endtime="20211206 13:30:28.767"/>
+<status status="PASS" starttime="20211206 15:10:31.778" endtime="20211206 15:11:55.575"/>
 </suite>
 <statistics>
 <total>

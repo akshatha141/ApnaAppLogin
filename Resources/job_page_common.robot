@@ -28,3 +28,6 @@ Wait for Element to be Enabled
     [Arguments]   ${element}
     Element Should Be Enabled           ${element}     timeout=20s     
 
+Wait for Element on Screen    
+    [Arguments]   ${element}
+    Wait Until Page Contains Element    ${element}     timeout=20s 
